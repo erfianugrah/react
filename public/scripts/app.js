@@ -31,6 +31,33 @@ var template = React.createElement(
         )
     )
 );
+
+// Create a templateTwo var JSX Expression
+// div
+//  h1 -> Erfi Anugrah
+//  p -> Age: 26
+//  p -> Location: Singapore
+//Render templateTwo instead of template
+
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'Erfi Anugrah'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Age: 26'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Location: Singapore'
+    )
+);
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
