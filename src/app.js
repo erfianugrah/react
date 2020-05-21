@@ -1,7 +1,11 @@
 console.log('App.js is running!');
 
 // JSX - JavaScript XML
-var template = <h1>Indecision App</h1>;
-var appRoot = document.getElementById('app');
+var template = 
+<div>
+    <h1>Indecision App</h1>
+        <p>This is some info</p>
+</div>;
 
-ReactDOM.render(template, appRoot);a
+var appRoot = document.getElementById('app');
+ReactDOM.render(template, appRoot);
