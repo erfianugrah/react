@@ -18,11 +18,11 @@ var template = (
 //  p -> Age: 26
 //  p -> Location: Singapore
 //Render templateTwo instead of template
-
+var userName = 'John Wick';
 var templateTwo = (
     <div>
         <h1>
-           Erfi Anugrah
+           {userName}
         </h1>
         <p>
             Age: 26

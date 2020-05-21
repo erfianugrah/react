@@ -38,14 +38,14 @@ var template = React.createElement(
 //  p -> Age: 26
 //  p -> Location: Singapore
 //Render templateTwo instead of template
-
+var userName = 'John Wick';
 var templateTwo = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Erfi Anugrah'
+        userName
     ),
     React.createElement(
         'p',
