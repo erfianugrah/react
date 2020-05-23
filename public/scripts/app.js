@@ -13,7 +13,12 @@ var onFormSubmit = function onFormSubmit(e) {
     if (option) {
         app.options.push(option);
         e.target.elements.option.value = ' ';
+        renderTemplate();
     };
+};
+
+var onRemoveAll = function onRemoveAll() {
+    app.options = [];
     renderTemplate();
 };
 
@@ -42,6 +47,11 @@ var renderTemplate = function renderTemplate() {
             'p',
             null,
             app.options.length
+        ),
+        React.createElement(
+            'button',
+            { onClick: onRemoveAll },
+            'Remove All'
         ),
         React.createElement(
             'ol',
