@@ -11,13 +11,13 @@ const onFormSubmit = (e) => {
     if (option) {
         app.options.push(option);
         e.target.elements.option.value = ' ';
-    }
+    };
     renderTemplate();
 };
 
 const appRoot = document.getElementById('app');
 
-const renderTemplate () => {
+const renderTemplate = () => {
     const template = (
         <div>
             <h1>{app.title ? app.title : 'It doesn\'t exist'}</h1>
