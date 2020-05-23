@@ -1,10 +1,8 @@
-var nameVar = 'Erfi';
-nameVar = 'Anugrah';
-console.log('nameVar', nameVar);
+// Block Scoping
 
-let nameLet = 'Erfi';
-nameLet = 'Anugrah';
-console.log('nameLet', nameLet);
+const fullName = 'Erfi Anugrah';
 
-const nameConst = 'Andrew';
-console.log('nameConst', nameConst);
+if (fullName) {
+    const  firstName = fullName.split(' ')[0];
+    console.log(firstName);
+}
