@@ -1,15 +1,14 @@
 // import './utils.js';
-import {isAdult, canDrink} from './person.js';
+import isSenior, {isAdult, canDrink} from './person.js';
 console.log(isAdult(21));
 console.log(canDrink(18));
+console.log(isSenior(65));
 
+// import substract, {square, add} from './utils.js';
 // console.log('app.js is running');
 // console.log(square(3));
 // console.log(add(5,6));
+// console.log(substract(45,252));
 
-// person.js
-// Named export - isAdult(21) - true/false - if adult
-// Named export - canDrink(18) -true/false 
-
-//import isAdult and canDrink
-//Use both printing result to the console
+// Setting the default export and function
+// Grab the default and call it
