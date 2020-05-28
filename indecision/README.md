@@ -1,1 +1,1 @@
-# react
+# React-based RNG App
