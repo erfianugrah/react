@@ -1,4 +1,4 @@
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 
 const incrementCount = ({ incrementBy = 1 } = {}) => ({
     type: 'INCREMENT',
@@ -18,15 +18,6 @@ const setCount = ({ count }) => ({
 const resetCount = () => ({
     type: 'RESET',
 });
-
-// Reducers
-// 1. Reduces are pure functions
-// 2. Never change state or action
-
-let a = 10;
-const add = (b) => {
-    return a + b;
-};
 
 const countReducer = (state = { count: 0 }, action) => {
     switch (action.type) {
@@ -51,7 +42,7 @@ const countReducer = (state = { count: 0 }, action) => {
         }
     };
 
-const store = createStore(countReducer );
+const store = createStore(countReducer);
 
 const unsubscribe = store.subscribe(() => {
     console.log(store.getState());
@@ -60,8 +51,6 @@ const unsubscribe = store.subscribe(() => {
 store.dispatch(incrementCount({ incrementBy: 5 }));
 
 store.dispatch(incrementCount());
-
-store.dispatch(decrementCount());
 
 store.dispatch(resetCount());
 
