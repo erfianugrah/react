@@ -23,8 +23,6 @@ const withAdminWarning = (WrappedComponent) => {
     );
 };
 
-// requireAuthentication
-
 const requireAuthentication = (WrappedComponent) => {
     return (props) => (
         <div>
