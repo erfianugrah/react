@@ -8,7 +8,7 @@
     "serve": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest --config=jest.config.json"
   },
   "dependencies": {
     "@babel/cli": "^7.10.1",
@@ -33,6 +33,7 @@
     "react-modal": "^3.11.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
+    "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
