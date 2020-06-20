@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const loader = require('sass-loader');
 
 module.exports = (env) => {
     const isProduction = env === 'production';
