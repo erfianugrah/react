@@ -13,14 +13,16 @@ export class EditExpensePage extends React.Component {
         this.props.history.push('/');
     };
     render() {
-        <div>
-            <ExpenseForm
+        return (
+            <div>
+              <ExpenseForm
                 expense={this.props.expense}
                 onSubmit={this.onSubmit}
-            />
-            <button onClick={this.onRemove}>Remove Expense </button>
-        </div>
-    };
+              />
+              <button onClick={this.onRemove}>Remove</button>
+            </div>
+    );
+  }
 };
 
 
