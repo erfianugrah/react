@@ -23,6 +23,10 @@ database.ref().set({
         city: 'Singapore',
         country: 'United States'
     }
+}).then(() => {
+    console.log('Data is saved');
+}).catch((e) => {
+    console.log('This failed.', e);
 });
 
 database.ref('age').set(27);
