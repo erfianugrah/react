@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 
 const config = {
     apiKey: "AIzaSyD8YHfSgTCmOYdwlrxVIxRrsnL7dKtq_O0",
@@ -29,9 +29,14 @@ database.ref().set({
     console.log('This failed.', e);
 });
 
-database.ref('age').set(27);
-database.ref('location/city').set('Stockholm');
+// database.ref('age').set(27);
+// database.ref('location/city').set('Stockholm');
+
 database.ref('attributes').set({
     height: 165,
     weight: 60
+}).then(() => {
+    console.log('Second set call works');
+}).catch((e) => {
+    console.log('Things didn\'t for the second error', e);
 });
