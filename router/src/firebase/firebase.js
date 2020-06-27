@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 
 const config = {
     apiKey: "AIzaSyD8YHfSgTCmOYdwlrxVIxRrsnL7dKtq_O0",
@@ -15,28 +15,36 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-database.ref().set({
-    name: 'Erfi Anugrah',
-    age: 26,
-    isSingle: false,
-    location: {
-        city: 'Singapore',
-        country: 'United States'
-    }
-}).then(() => {
-    console.log('Data is saved');
-}).catch((e) => {
-    console.log('This failed.', e);
-});
 
-// database.ref('age').set(27);
-// database.ref('location/city').set('Stockholm');
+// database.ref()
+//     .once('value')
+//     .then((snapshot) => {
+//         const val = snapshot.val();
+//         console.log(val);
+//     })
+//     .catch((e) => {
+//         console.log('Error fetching data', e);
+//     });
+// database.ref().set({
+//     'name': 'Erfi Anugrah',
+//     'age': 26,
+//     'isSingle': false,
+//     'location': {
+//         'city': 'Singapore',
+//         'country': 'United States'
+//     }
+// }).then(() => {
+//     console.log('Data is saved');
+// }).catch((e) => {
+//     console.log('This failed.', e);
+// });
 
-database.ref('attributes').set({
-    height: 165,
-    weight: 60
-}).then(() => {
-    console.log('Second set call works');
-}).catch((e) => {
-    console.log('Things didn\'t for the second error', e);
-});
+// database.ref('isSingle').set(null);
+
+// database.ref('isSingle')
+//     .remove()
+//     .then(() => {
+//         console.log('Data was removed');
+//     }).catch((e) => {
+//         console.log('Data wasn\'t removed', e);
+//     });
