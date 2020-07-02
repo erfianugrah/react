@@ -1,4 +1,9 @@
-import { addExpense, editExpense, removeExpense } from '../../actions/expenses';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { startAddExpense, addExpense, editExpense, removeExpense } from '../../actions/expenses';
+import expenses from '../fixtures/expenses';
+
+const createMockStore = configureMockStore([thunk]);
 
 test('should setup remove expense action object', () => {
     const action = removeExpense({ id: '123abc' });
@@ -14,7 +19,7 @@ test('should setup edit expense action object', () => {
         type: 'EDIT_EXPENSE',
         id: '123abc',
         updates: {
-           note: 'new note value'
+        note: 'new note value'
         }
     });
 });
@@ -36,8 +41,8 @@ test('should setup add expense action object with provided values', () => {
     });
 });
 
-test('should setup add expense action objet with default values', () => {
-    const action = addExpense();
+test('should setup add expense action object with default values', () => {
+    const action = addExpense(expenses[2]);
     expect(action).toEqual({
         type: 'ADD_EXPENSE',
         expense: {
@@ -48,4 +53,16 @@ test('should setup add expense action objet with default values', () => {
             createdAt: 0
         }
     });
+});
+
+test('should setup add expense action object with default values', () => {
+    const store = createMockStore({});
+    const expenseData = {
+        description: 'mouse',
+        amount: 3000,
+        note: 'This one is better',
+        createdAt: 1000
+    };
+    
+    store.dispatch(startAddExpense())
 });
