@@ -58,7 +58,7 @@ export const startSetExpenses = () => {
         });
       });
 
-      dispatch(setExpenses())
+      dispatch(setExpenses(expenses));
     });
   };
 };
