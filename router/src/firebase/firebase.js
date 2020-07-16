@@ -30,11 +30,8 @@ export { firebase, googleAuthProvider, database as default };
 //                 ...childSnapshot.val()
 //             });
 //         });
-
 //         console.log(expenses);
 //     });
-
-
 
 // database.ref('expenses').push({
 //     description: 'Rent',
@@ -49,7 +46,6 @@ export { firebase, googleAuthProvider, database as default };
 // });
 // const firebaseNotes = {
 //     notes: {
-
 //     }
 // };
 
