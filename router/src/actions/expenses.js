@@ -18,7 +18,7 @@ export const startAddExpense = (expenseData = {}) => {
     } = expenseData;
     const expense = { description, note, amount, createdAt };
 
-    return database.ref(`users/${uid}/expense`).push(expense).then((ref) => {
+    return database.ref(`users/${uid}/expense/${id}`).push(expense).then((ref) => {
       dispatch(addExpense({
         id: ref.key,
         ...expense
@@ -68,7 +68,7 @@ export const setExpenses = (expenses) => ({
 export const startSetExpenses = () => {
   return (dispatch, getState) => {
     const uid = getState().auth.uidl
-    return database.ref(`users/${uid}/expenses`).once('value').then((snapshot) => {
+    return database.ref(`users/${uid}/expenses${id}`).once('value').then((snapshot) => {
       const expenses = [];
 
       snapshot.forEach((childSnapshot) => {
