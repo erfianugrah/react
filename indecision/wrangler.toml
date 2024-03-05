@@ -1,7 +1,0 @@
-name = "rng"
-type = "webpack"
-account_id = "25f21f141824546aa72c74451a11b419"
-workers_dev = false
-route = "indecision.erfianugrah.com/*"
-zone_id = "3f2c4daa43d5920f313654a873b31d06"
-webpack_config = "webpack.config.js"
